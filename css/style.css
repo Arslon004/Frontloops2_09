@@ -1,0 +1,265 @@
+html{box-sizing: border-box;}
+*,*::before,*::after{
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 145px;
+  background-color: #4677f6;
+  min-height: 100vh;
+}
+.container{
+  background-color: #fff;
+  width: 450px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 34px 28px;
+}
+header img{
+  opacity: 0.6;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+header img:hover{
+  opacity: 1;
+}
+header p{
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+.map{
+  position: relative;
+  background:linear-gradient(rgba(62, 108, 246, 0.6),rgba(62, 108, 246, 0.6)) ,url(../images/map.png) no-repeat center;
+  background-size: cover;
+  padding: 40px 41px 53px;
+  color: #fff;
+  margin: 0 -10px;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+}
+.map_title p{
+  margin: 0;
+}
+.map_title{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.distance{
+display: flex;
+flex-grow: 0.8;
+position: relative;
+}
+.distance::after{
+  content: url(../images/car.svg) ;
+  position: absolute;
+  transform: scale(0.8);
+  top: -15px;left:calc(30% - 8px) ;
+}
+.masofa{
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 8px;
+  background: linear-gradient(90deg, #fff 32%, rgba(255, 255, 255, 0.5) 32%);
+}
+.masofa::after,.masofa::before{
+  content: '';
+  position: absolute;
+  width: 7px;height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: -3px;
+}
+.masofa::after{
+  right: -3px;
+}
+.masofa::before{
+  left: -3px;
+}
+.timer p{
+  margin: 0;
+}
+.timer{
+  display: flex;
+  width:80%;
+  margin-top: 27px;
+  justify-content: space-between;
+  align-items: center;
+}
+button p{
+  margin: 0;
+  margin-left: 12px;
+  font-size: 0.9rem;
+}
+button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  bottom: -13px;
+  border: none;
+  background-color: #4677f6;
+  padding: 14px 12px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: .3s ease all;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #7577f6;
+}
+.ride{
+  padding: 42px 0 34px 32px;
+}
+.ride_text{
+  margin: 0;
+  margin-bottom: 43px;
+  font-weight: 700;
+}
+.step_right p{
+  margin: 0;
+}
+.step{
+  display: flex;
+  margin-bottom: 35px;
+}
+.step:last-child{
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+.step_right{
+  margin-left: 33px;
+}
+.step_right p:first-child{
+  margin-bottom: 12px;
+  color: #c5b5ac;
+}
+
+.step_image{
+  background: url(../images/streetview.jpg) no-repeat left;
+  background-size: cover;
+  min-height: 70px;
+  position: relative;
+  border-radius: 3px 0 0 3px;
+}
+.step_image img{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14px;
+}
+/*
+.distance{
+  height: 2px;
+  width: 100%;
+  position: relative;
+  background:linear-gradient(90deg, #fff 32%, rgba(255, 255, 255, 0.3) 32%);
+}
+.distance::after, .distance::before{
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: -3px;
+}
+.distance::before{
+  left: -3px;
+}
+.distance::after{
+  right: -3px;
+}
+.city{
+  font-weight: 500;
+}
+.infos{
+  display: flex;
+}
+.infos p{
+  margin: 0;
+}
+.time_info, .distance_info{
+  width: 50%;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .8rem;
+}
+.open_map_btn{
+  position: absolute;
+  border: none;
+  right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 12px;
+  background-color: #4677f6;
+  border-radius: 10px;
+  bottom: -20px;
+  cursor: pointer;
+  transition: .4s ease all;
+}
+.open_map_btn:hover{
+  opacity: 0.8;
+}
+.open_map_btn p{
+  margin: 0;
+  text-transform: uppercase;
+  margin-left: 13px;
+  color: #fff;
+}
+
+.ride{
+  padding: 43px 0 35px 35px;
+  position: relative;
+}
+.ride_city{
+  margin-bottom: 35px;
+}
+.step{
+  display: flex;
+  margin-bottom: 30px;
+}
+.step:last-child{
+  margin-bottom: 0;
+}
+.step img{
+  margin-right: 30px;
+}
+.step_info{
+  display: flex;
+  flex-direction: column;
+}
+.step_info small{
+  font-size: 0.8rem;
+  color: #aaaaab;
+}
+.step_info span{
+  font-size: .9rem;
+}
+.street_view{
+  background:url(../images/streetview.jpg) no-repeat left;
+  background-size: cover;
+  min-height: 70px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: .6rem;
+}
+.street_view img{
+  position: relative;
+  top: 15px;
+} */
